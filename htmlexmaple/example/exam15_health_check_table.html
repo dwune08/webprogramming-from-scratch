@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 750px;
+        }
+        caption {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #e9f4ea;
+        }
+        tfoot {
+            background-color: #f7f7f7;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>건강검진 결과표</h1>
+    <p>
+        건강검진 항목과 결과를 표로 정리한 페이지입니다.
+    </p>
+
+    <table>
+        <caption>기본 검강검진 결과</caption>
+            <thead>
+                <tr>
+                    <th>구분</th>
+                    <th>검사항목</th>
+                    <th>결과</th>
+                    <th>정상 범위</th>
+                    <th>판정</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">신체 측정</td>
+                    <td>키</td>
+                    <td>170cm</td>
+                    <td>-</td>
+                    <td>정상</td>
+                </tr>
+                <tr>
+                    <td>몸무게</td>
+                    <td>65kg</td>
+                    <td>-</td>
+                    <td>정상</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">혈액 검사</td>
+                    <td>혈당</td>
+                    <td>92mg/dL</td>
+                    <td>70 ~ 100mg/dL</td>
+                    <td>정상</td>
+                </tr>
+                <tr>
+                    <td>콜레스테롤</td>
+                    <td>185mg/dL</td>
+                    <td>200mg/dL</td>
+                    <td>정상</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5">검진 결과 요약 : 신체 측정과 혈액 검사 항목 모두 정상입니다.</td>
+                </tr>
+
+            </tfoot>
+    </table>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도서관 안내</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 700px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 12px;
+        }
+        th {
+            background-color: #f2f2f2;
+            width: 160px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>도서관</h1>
+        <p>
+            
+        </p>
+        <figure>
+            <img src="../image/library.jpg" alt="도서관 내부 사진" width="600">
+
+        </figure>
+    </header>
+    <hr>
+
+    <nav>
+        <h2>진행중인 프로그램 안내(링크)</h2>
+        
+        <a href="library_program.html">문화 프로그램</a>
+        <a href="#">아동 프로그램</a>
+    </nav>
+    <hr>
+    <main>
+        <section>
+            <h2>새소식</h2>
+            <a href="notice2.html" target="newsFrame">공지사항</a>
+            <a href="new2.html" target="newsFrame">보도자료</a>
+            <br>
+             <iframe
+                src="news.html"
+                name="newsFrame"
+                title="새 소식 영역"
+                width="600"
+                height="300">
+            </iframe>
+        </section>
+        <section>
+            <h2>안내정보</h2>
+            <table>
+                <tr>
+                    <th>운영일</th>
+                    <td>화요일 ~ 토요일</td>
+                </tr>
+                <tr>
+                    <th>운영시간</th>
+                    <td>10:00 ~ 17:00</td>
+                </tr>
+                <tr>
+                    <th>휴관일</th>
+                    <td>매주 일요일, 월요일</td>
+                </tr>
+                <tr>
+                    <td colspan="2">※서적은 대출이 불가합니다.</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h2>신간도서</h2>
+            <img src="../image/existence.jpg" alt="참을 수 없는 존재의 가벼움 표지" height="400">
+            　    
+            <img src="../image/passion.jpg" alt="열정 표지" height="400">
+        </section>
+        
+    </main>
+
+
+    <footer>
+        <p>
+            Copyright 2026. dwune.
+        </p>
+    </footer>
+</body>
+</html>

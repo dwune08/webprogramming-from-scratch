@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 페이지</title>
+</head>
+<body>
+    <h1>로그인</h1>
+    <p>
+        아이디와 비밀번호를 입력하여 로그인하세요.
+    </p>
+
+    <form method="post">
+        <fieldset>
+            <legend>로그인 정보</legend>
+
+            <p>
+                <label for="userId">아 이 디</label>
+                <input type="text" id="userId" name="userId" placeholder="아이디 입력">
+            </p>
+
+            <p>
+                <label for="userPw">비밀번호</label>
+                <input type="password" id="userPw" name="userPw" placeholder="비밀번호 입력">
+            </p>
+
+            <p>
+                <input type="checkbox" id="saveId" name="saveId" value="Y">
+                <label for="saveID">아이디 저장</label>
+            </p>
+
+            <p>
+                <button type="submit">로그인</button>
+                <button type="reset">다시 입력</button>
+            </p>
+
+        </fieldset>
+    </form>
+    
+</body>
+</html>
