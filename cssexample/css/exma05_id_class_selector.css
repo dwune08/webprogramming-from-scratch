@@ -1,0 +1,21 @@
+#title {
+    font-size: 28px;
+    color: white;
+    background-color: #2939c7;
+    padding: 12px;
+    text-align: center;
+    width: 360px;
+}
+.menu {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    margin: 8px;
+}
+.price {
+    color: #2f1ec4;
+}
+.notice {
+    font-size: 14px;
+    color: #777777;
+}

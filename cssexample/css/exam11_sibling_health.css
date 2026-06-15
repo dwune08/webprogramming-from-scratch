@@ -1,0 +1,44 @@
+body {
+    font-family: "맑은 고딕", Arial, sans-serif;
+    margin: 30px;
+}
+h1 {
+    color: #2f855a;
+}
+
+h3 {
+    color: #2b6cb0;
+    margin-top: 25px;
+}
+
+/* 인접 형제 선택자: h3 바로 다음에 나오는 p 하나만 선택 */
+h3 + p {
+    background-color: #e6f7ff;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* 형제 선택자: h3 뒤에 나오는 모든 p 선택 */
+h3 ~ p {
+    color: #444444;
+    line-height: 1.6;
+}
+
+/* 인접 형제 선택자: .routine 바로 다음에 나오는 ul 선택 */
+.routine + ul {
+    background-color: #fff7eb;
+    border-left: 5px solid #c75b39;
+    padding: 15px;
+    width: 380;
+}
+
+/* 형제 선택자: .routine 뒤에 나오는 .tip 선택 */
+.routine ~ .tip {
+    color: #8b5e3c;
+    font-style: italic;
+    font-weight: bold;
+}
+
+li {
+    margin: 6px;
+}

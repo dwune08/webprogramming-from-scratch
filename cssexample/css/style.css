@@ -1,0 +1,11 @@
+body {
+    background:rgb(255, 201, 156);
+}
+h1 {
+    font-size: 48px;
+    color: rgb(33, 54, 87);
+    font-style:italic;
+}
+p{
+    font-size: 24px;
+}

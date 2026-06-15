@@ -1,0 +1,16 @@
+* {
+    font-family: "92 25", sans-serif;
+}
+h1 {
+    color: #8B5E3C;
+    background-color: #FFF3D6;
+    padding: 10px;
+}
+p {    
+    font-size: 18px;
+    line-height: 1.6;
+}
+li {
+    color: #6B4F3F;
+    margin: 5px;
+}

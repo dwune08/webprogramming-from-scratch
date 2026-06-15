@@ -1,0 +1,84 @@
+body {
+    font-family: "맑은 고딕", Arial, sans-serif;
+    margin: 30px;
+    background-color: #fffdf7;
+}
+h1 {
+    color: #5c4033;
+}
+
+/* 가상 요소 선택자: 제목 앞에 아이콘 추가 */
+h1::before {
+    content: "📢 ";
+}
+
+.notice-list {
+    width: 520px;
+    padding: 0;
+    list-style: none;
+}
+
+.notice-list li {
+    width: 520px;
+    padding: 0;
+    list-style: none;
+}
+
+.notice-list li {
+    padding: 12px;
+    border-bottom: 1px solid #dddddd;
+    background-color: white;
+}
+
+/* 가상 클래스 선택자: 첫 번째 공지 */
+.notice-list li:first-child {
+    background-color: #fff3cd;
+    font-weight: bold;
+}
+
+/* 가상 클래스 선택자: 홀수 번째 공지 */
+.notice-list li:nth-child(odd) {
+    border-left: 5px solid #c75b39;
+}
+
+/* 가상 클래스 선택자: 마우스를 올렸을 때 */
+.notice-list li:hover {
+    background-color: #f8e9d2;
+    cursor: pointer;
+}
+
+/* 가상 요소 선택자: 각 공지 앞에 표시 추가 */
+.notice-list li::before {
+    content: "✔️ ";
+    color: #2f855a;
+    font-weight: bold;
+}
+
+.important::after {
+    content: " 중요";
+    color: red;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.new::after {
+    content: " NEW";
+    color: white;
+    background-color: #c75b39;
+    font-size: 12px;
+    padding: 2px 5px;
+    margin-left: 5px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    width: 250px;
+    border: 1px solid #aaaaaa;
+}
+
+/* 가상 클래스 선택자: 입력 상자에 포커스가 있을 때 */
+input[type="text"]:focus {
+    outline: none;
+    border: 2px solid #c75b39;
+    background-color: #fff3e0;
+}
