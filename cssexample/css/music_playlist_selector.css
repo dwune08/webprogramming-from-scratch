@@ -1,0 +1,63 @@
+body {
+    font-family: "맑은 고딕", Arial, sans-serif;
+    
+}
+
+.player {
+    width : 400px;
+    padding : 3px;
+    background-color: #5e41ff;
+    
+}
+
+.top {
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 8px;
+}
+
+.top h2 {
+    text-align: center;
+}
+
+.top p {
+    text-align: center;
+    color : #ffffff;
+    font-size: 12px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.list p button {
+    float: right;
+    margin-top : 13px;
+}
+
+.artist {
+    float: right;
+    font-size: 15px;
+    color : #666666;
+    margin-right: 10px;
+}
+
+.list p::before {
+    content : "💽 ";
+}
+
+.list p{
+    height: 50px;
+    padding: 0px 15px;
+    margin: 0px 0;
+    box-sizing: border-box;
+    
+    line-height: 50px;
+    
+    background-color: white;
+    border: 1px solid #dddddd;
+    color: #2b15a5;
+    
+}
+

@@ -1,0 +1,66 @@
+body {
+    font-family: "맑은 고딕", Arial, sans-serif;
+    margin: 30px;
+    background-color: #fffdf7;
+    color: #333333;
+}
+
+h1 {
+    text-align: center;
+    color: #5c4033;
+}
+
+table {
+    width: 860px;
+    margin: 20px auto;
+
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+caption {
+    caption-side: top;
+    font-size: 24px;
+    font-weight: bold;
+    color: #8b5e3c;
+    margin-bottom: 10px;
+}
+
+th, td {
+    border: 1px solid #d6bfa8;
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #8b5e3c;
+    color: white;
+}
+
+td {
+    background-color: #fff7e8;
+}
+
+.subject {
+    font-weight: bold;
+    color: #2b6cb0;
+}
+
+.closed {
+    color: red;
+    font-weight: bold;
+}
+
+.available {
+    color: #2f855a;
+    font-weight: bold;
+}
+
+.note {
+    width: 760px;
+    margin: 10px auto;
+    font-size: 14px;
+    color: gray;
+    text-align: right;
+}
