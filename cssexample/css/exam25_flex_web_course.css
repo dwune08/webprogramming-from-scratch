@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    font-family: "맑은 고딕", Arial, sans-serif;
+    margin: 0;
+    background-color: #fffdf7;
+    color: #333333;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 40px 20px;
+    background-color: #5c4033;
+    color: white;
+    text-align: center;
+}
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 34px;
+    letter-spacing: 2px;
+}
+header p {
+     margin: 0;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    padding: 15px;
+    background-color: #a65f2b;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    width: 1100px;
+    margin: 35px auto;
+
+    flex: 1;
+}
+
+.intro {
+    padding: 25px;
+    margin-bottom: 30px;
+
+    background-color: #fff7e8;
+    border: 1px solid #d68fa8;
+    border-radius: 15px;
+}
+.intro h2{
+    margin-top: 0;
+    color: #8b5e3c;
+}
+.intro p {
+    line-height: 1.7;
+    text-indent: 20px;
+}
+
+.card-section h2 {
+    text-align: center;
+    color: #5c4033;
+    margin-bottom: 25px;
+}
+
+.card-list {
+    display: flex;
+    gap: 20px;
+}
+.card {
+    flex: 1;
+    padding: 25px;
+
+    background-color: white;
+    border: 1px solid #d6bfa8;
+    border-radius: 15px;
+    box-shadow: 4px 4px 12px rgba(0,0,0,0.12);
+}
+.card h3 {
+    margin-top: 0;
+    color: #a65f2b;
+    text-align: center;
+    font-size: 24px;
+}
+.card p {
+    line-height: 1.7;
+    text-indent: 20px;
+}
+.card ul {
+    margin-top: 18px;
+    padding: 15px 25px;
+
+    background-color: #fff7e8;
+    border: 1px dashed #d6bfa8;
+    border-radius: 10px;
+
+    list-style-type: disc;
+    line-height: 1.8;
+}
+
+.level {
+    display: block;
+    margin: 15px 0;
+    padding: 10px;
+
+    background-color: #fdebd0;
+    color: #8b5e3c;
+    border-left: 5px solid #a65f2b;
+
+    font-weight: bold;
+    text-align: center;
+}
+
+footer {
+    padding: 20px;
+    background-color: #333333;
+    color: white;
+    text-align: center;
+}
+footer p {
+    margin: 0;
+}

@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    font-family: "맑은 고딕", Arial, sans-serif;
+    margin: 0;
+    background-color: #131257;
+    color: #333333;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.head {
+    padding: 20px 10px;
+    background-color: #131257;
+    color: white;
+    text-align: center;
+}
+
+.intro {
+    padding: 25px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+
+    background-color: white;
+    border-top: 1px solid #131257;
+    border-bottom: 1px solid #131257;
+}
+.intro h2{
+    margin-top: 0;
+    color: #131257;
+}
+.intro p {
+    line-height: 1.7;
+    text-indent: 20px;
+}
+
+.obj {
+    padding: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    background-color: white;
+    border-top: 1px solid #131257;
+    border-bottom: 1px solid #131257;
+}
+.obj h2{
+    margin-top: 0;
+    color: #131257;
+}
+.obj ul {
+    display: flex;
+    list-style: none;
+}
+.obj h3 {
+    text-align: center;
+}
+.obj li {
+    width: 160px;
+    margin: 15px;
+}
+
+.table {
+    padding: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    background-color: white;
+    border-top: 1px solid #131257;
+    border-bottom: 1px solid #131257;
+}
+table {
+   border-collapse: collapse; 
+   width: 800px;
+   text-align: center;
+}
+th, td {
+    border: 1px solid #000000;
+}
+th {
+    background-color: #131257;
+    color: white;
+}
+
+.warning {
+    padding: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    background-color: white;
+    border-top: 1px solid #131257;
+    border-bottom: 1px solid #131257;
+}

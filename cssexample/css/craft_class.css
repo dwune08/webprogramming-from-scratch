@@ -1,0 +1,100 @@
+* {
+   box-sizing: border-box; 
+   
+}
+
+body {
+    text-align: center;
+}
+
+.list {
+    width: 700px;;
+    text-align: left;
+    margin : auto;
+}
+
+.subject {
+    font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+}
+
+.introduce {
+    width: 700px;
+    margin: 10px auto;
+    padding: 10px;
+
+    background-color: #fff9f9;
+    border: 3px dotted #ffd2d2;
+    border-radius: 20px;
+}
+
+.sub {
+    width: 700px;
+    margin: 10px auto;
+    padding: 10px;
+
+    background-color: #fffdf6;
+    border: 3px dotted #ffedd5;
+    border-radius: 20px;
+}
+
+.timetable {
+    width: 700px;
+    margin: 10px auto;
+    padding: 10px;
+
+    background-color: #fffbf6;
+    border: 3px dotted #ffe7d3;
+    border-radius: 20px;
+}
+
+.order {
+    width: 700px;
+    margin: 10px auto;
+    padding: 10px;
+
+    background-color: #f5f6ff;
+    border: 3px dotted #d5ddff;
+    border-radius: 20px;
+}
+
+.warning {
+    margin-top: 25px;
+    padding: 20px 35px;
+    background-color: #ffffff;
+    border-top : 6px solid #1e88e5;
+    border-bottom: 6px solid #1e88e5;
+    line-height: 1.8;
+}
+
+ul {
+    list-style: none;
+}
+
+ul > li::before {
+    content : "🪁 "
+}
+
+table {
+    margin : auto;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+th, td {
+    border: 1px solid #000000;
+    border-left: none;
+    border-right: none;
+}
+
+thead {
+    background-color: #9e7858;
+}
+
+td {
+    background-color: #ddbf97;
+}
