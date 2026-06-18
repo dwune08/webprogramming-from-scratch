@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 개발 학습 페이지</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+    <header>
+        <h1>웹 개발 학습 페이지</h1>
+        <p>HTML, CSS, JavaScript를 학습하는 공간입니다.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">홈</a>
+        <a href="html.html">HTML</a>
+        <a href="css.html">CSS</a>
+        <a href="#">JavaScript</a>
+        <a href="gallery.html">학습 갤러리</a>
+    </nav>
+
+    <main class="html-main">
+        <section>
+            <h2>CSS의 정의와 역할</h2>
+            <P>
+                CSS(Cascading Style Sheets)는 HTML로 만든 웹 페이지의 뼈대에 옷을 입히고 꾸미는 스타일시트 언어입니다.
+                글꼴, 색상, 정렬, 배경뿐만 아니라 요소들의 배치와 레이아웃을 결정하여 사용자에게 아름다운 화면을 제공합니다.
+            </P>
+        </section>
+
+        <section>
+            <h2>CSS 선택자와 스타일 속성</h2>
+            <P>
+                CSS는 변경하고 싶은 HTML 요소를 콕 집는 '선택자(Selector)'와
+                무엇을 바꿀지 결정하는 '속성(Property)'으로 이루어집니다.
+                id나 class를 이용해 특정 태그만 선택하고, 중괄호 { } 안에 스타일 규칙을 선언합니다.
+            </P>
+        </section>
+
+        <section>
+            <h2>박스 모델 (Box Model)</h2>
+            <p>
+                HTML의 모든 요소는 사각형의 상자(Box) 형태를 가집니다.
+                실제 콘텐츠 영역을 중심으로 안쪽 여백인 padding, 테두리인 border, 바깥쪽 여백인 margin으로 구성되며,
+                이들의 관계를 이해해야 레이아웃이 삐져나가는 현상을 막을 수 있습니다.
+            </p>
+        </section>
+
+        <aside>
+            <div class="card">
+                <h2>Flexbox 레이아웃 (1차원 정렬)</h2>
+                <p>
+                    Flexbox는 행(가로) 또는 열(세로) 중 한 방향으로 요소를 유연하게 정렬할 때 사용하는 강력한 레이아웃 모델입니다.
+                    메뉴 바를 나란히 배치하거나, 카드 내부의 아이템들을 정중앙에 정렬하고 정밀하게 간격을 분배할 때 핵심적으로 쓰입니다.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Grid 레이아웃 (2차원 배치)</h2>
+                <p>
+                    Grid는 가로(행)와 세로(열)를 모두 사용하는 2차원 바둑판식 레이아웃을 만들 때 사용합니다. 
+                    페이지 전체의 메인 본문 영역과 사이드바 영역을 크게 나누거나, 
+                    정형화된 갤러리 형태의 화면 구조를 완벽하게 설계할 때 가장 효과적입니다.
+                </p>
+            </div>
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>Copyright 2026. Web Site.</p>
+    </footer>
+</body>
+</html>

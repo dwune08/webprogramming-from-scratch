@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 개발 학습 페이지</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/html.css">
+</head>
+<body>
+    <header>
+        <h1>웹 개발 학습 페이지</h1>
+        <p>HTML, CSS, JavaScript를 학습하는 공간입니다.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">홈</a>
+        <a href="html.html">HTML</a>
+        <a href="css.html">CSS</a>
+        <a href="#">JavaScript</a>
+        <a href="gallery.html">학습 갤러리</a>
+    </nav>
+
+    <main class="html-main">
+        <section>
+            <h2>HTML의 정의와 역할</h2>
+            <P>
+                HTML(HyperText Markup Language)은 웹 페이지의 뼈대를 만드는 가장 기본적인 마크업 언어입니다.
+                웹 브라우저에게 "이 부분은 제목이고, 이 부분은 본문이다"라는 구조를 알려주는 역할을 합니다.
+            </P>
+        </section>
+
+        <section>
+            <h2>HTML 태그의 기본 구조</h2>
+            <P>
+                HTML은 주로 열는 태그(&lt;tag&gt;)와 닫는 태그(&lt;/tag&gt;)가 콘텐츠를 감싸는 쌍의 형태로 존재합니다.
+                일부 태그(&lt;img&gt;, &lt;br&gt; 등)는 닫는 태그가 없는 빈 태그(Empty Tag) 형태로 사용되기도 합니다.
+            </P>
+        </section>
+
+        <section>
+            <h2>시맨틱 태그 (의미가 있는 태그)</h2>
+            <p>
+                의미를 가진 태그들을 사용하여 웹 페이지의 구조를 명확히 합니다.
+                대표적으로 머리말을 뜻하는 &lt;header&gt;, 메뉴를 뜻하는 &lt;nav&gt;,
+                독립된 구역을 뜻하는 &lt;section&gt;, 하단 정보를 뜻하는 &lt;footer&gt; 등이 있습니다.
+            </p>
+        </section>
+
+        <aside>
+            <div class="card">
+                <h2>하이퍼링크와 이미지 속성</h2>
+                <p>
+                    HTML의 가장 큰 특징은 문서 간의 이동입니다. 
+                    &lt;a&gt; 태그의 href 속성을 이용해 다른 페이지로 링크를 연결할 수 있으며,
+                    &lt;img&gt; 태그의 src 속성으로 화면에 이미지를 불러옵니다.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>블록(Block) vs 인라인(Inline) 요소</h2>
+                <ul>
+                    <li>블록 요소: &lt;h1&gt;, &lt;p&gt;, &lt;div&gt; 등은 한 줄을 통째로 차지하며 가로 너비가 100%가 되는 성질이 있습니다.</li>
+                    <li>인라인 요소: &lt;span&gt;, &lt;a&gt;, &lt;strong&gt; 등은 글자 크기만큼만 자리를 차지하며 옆으로 나란히 배치됩니다.</li>
+                </ul>
+            </div>
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>Copyright 2026. Web Site.</p>
+    </footer>
+</body>
+</html>
