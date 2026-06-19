@@ -23,7 +23,7 @@
 .card {
     padding: 25px;
     background-color: #2b6cb0;
-    border: 1px dashed #1f4e79;
+    border: 1px solid #1f4e79;
     border-radius: 12px;
     color: white;
 }

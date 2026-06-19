@@ -28,3 +28,16 @@
 .index-main h2 {
     margin-top: 0;
 }
+
+/* 모바일 화면에서는 index-main을 1단으로 변경 */
+@media screen and (max-width: 767px) {
+    .index-main {
+        grid-template-columns: 1fr;
+    }
+
+    .index-main section, .index-main article, .index-main aside {
+        grid-column: auto;
+        grid-row: auto;
+        padding: 20pz;
+    }
+}

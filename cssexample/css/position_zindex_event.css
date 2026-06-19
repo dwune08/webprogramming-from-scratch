@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "맑은 고딕", Arial, sans-serif;
+    margin: 0;
+    padding: 40px;
+    background-color: #f8f5ff;
+    color: #333333;
+}
+
+.event-card {
+    width: 800px;
+    height: 420px;
+    margin: 0 auto;
+    padding: 40px;
+
+    position: relative;
+
+    background-color: white;
+    border: 3px solid #d8c7f2;
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+.event-title {
+    color: #5a3e85;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.event-desc {
+    width: 520px;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.circle {
+    width: 260px;
+    height: 260px;
+
+    position: absolute;
+    right: -40px;
+    bottom: -40px;
+
+    background-color: #e7d8ff;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.badge {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+
+    padding: 12px 18px;
+    background-color: #8e6bc8;
+    color: white;
+    border-radius: 30px;
+    font-weight: bold;
+    z-index: 3;
+}
+
+.quick-button {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+
+    padding: 15px 22px;
+    background-color: #5a3e85;
+    color: white;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 10;
+}

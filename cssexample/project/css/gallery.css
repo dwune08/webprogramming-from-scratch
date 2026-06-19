@@ -1,5 +1,5 @@
 .gallery-main {
-    width: 1000px;
+    /* 변경: common.css의 main 반응형 너비를 사용하므로 고정 너비 제거 */
     margin: 30px auto;
 }
 
@@ -51,4 +51,25 @@
 .gallery-item p {
     margin: 0;
     line-height: 1.7;
+}
+
+/* 태블릿 화면에서는 갤러리를 2단으로 변경 */
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-item {
+        padding: 18px
+    }
+}
+
+/* 모바일 화면에서는 갤러리를 1단으로 변경 */
+@media screen and (max-width: 767px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    .gallery-item {
+        padding: 18px;
+    }
 }
