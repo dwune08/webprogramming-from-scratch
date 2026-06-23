@@ -15,3 +15,12 @@
 #titleResult {
     min-height: 36px;
 }
+
+.resultStyle {
+    color: orange;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: #555;
+    padding: 10px;
+    width: fit-content;
+}

@@ -42,12 +42,14 @@ function printTitle() {
     const title = document.querySelector('#titleResult');
 
     title.innerHTML = 'Hello JavaScript!';
-    title.style.color = 'orange';
+    /*title.style.color = 'orange';
     title.style.border = '1px solid #000';
     title.style.borderRadius = '10px';
     title.style.backgroundColor = '#555';
     title.style.padding = '10px';
-    title.style.width = 'fit-content';
+    title.style.width = 'fit-content';*/
+
+    title.classList.add("resultStyle");
 }
 
 // 예제 1 함수 선언 및 정의
