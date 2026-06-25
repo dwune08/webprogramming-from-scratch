@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 내장 객체</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/08-built-in0objects.css">
+    <script src="../js/08-built-in0objects.js" defer></script>
+</head>
+<body>
+    <header class="page-header">
+        <p class="chapter">JavaScript</p>
+        <h1>3.8 자바스크립트 내장 객체</h1>
+        <p>
+            내장 객체는 자바스크립트에서 기본적으로 제공하는 객체이다.
+            문자열 처리, 배열 관리, 날짜와 시간 처리, 수학 계산, 브라우저 제어 등에 사용할 수 있다.
+        </p>
+    </header>
+
+    <main>
+        <section class="lesson-section">
+            <h2>3.8.1 내장 객체의 개념</h2>
+            <p>
+                자바스크립트는 자주 사용하는 기능을 객체 형태로 미리 제공한다.
+                개발자는 이러한 내장 객체의 속성과 메서드를 사용하여 데이터를 쉽게 처리할 수 있다.
+            </p>
+
+            <pre><code>객체명.속성;
+객체명.메서드();</code></pre>
+
+            <div class="note-box">
+                <p>
+                    자주 사용하는
+                    <code>String</code>, <code>Date</code>, <code>Math</code>, <code>Array</code> 객체를 중심으로 학습한다.
+                </p>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2>3.8.2 String 객체</h2>
+            <p>
+                <code>String</code> 객체는 문자열 데이터를 다룰 때 사용한다.
+                문자열의 길이를 확인하거나, 특정 문자를 찾고, 대소문자를 변경하고, 문자열을 나누는 기능을 제공한다.
+            </p>
+
+            <pre><code>const text = "JavaScript";
+
+text.length;
+text.indexOf("찾을문자열");
+text.substring(시작인덱스, 종료인덱스);
+text.toLowerCase();
+text.toUpperCase();
+text.trim();
+text.split("구분자");</code></pre>
+
+            <div class="example-box">
+                <p class="example-title">실행 예제 - 이메일 주소 분석하기</p>
+                <p class="exmpale-desc">
+                    입력한 이메일 주소의 공백을 제거하고 소문자로 변경한 뒤,
+                    아이디와 도메인 정보를 분리하여 출력한다.
+                </p>
+
+                <div class="input-line">
+                    <input type="text" id="emailInput" placeholder="예: JavaUser@Naver.com">
+                    <button type="button" id="emailButton">
+                        분석하기
+                    </button>
+                </div>
+                
+                <div id="emailResult" class="output-box">
+                    결과가 이곳에 출력된다.
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="lesson-section">
+            <h2>3.8.3 Date 객체</h2>
+            <p>
+                <code>Date</code> 객체는 날짜와 시간 정보를 다룰 때 사용한다.
+                현재 날짜를 가져오거나, 선택한 날짜의 연도, 월, 일, 요일 정보를 확인할 수 있다.
+            </p>
+
+            <pre><code>const today = new Date();
+
+- 문자열로 날짜 생성
+const selectedDate = new Date("2026-12-31");
+
+- 숫자로 날짜 생성
+: 월은 0부터 시작하므로 11은 12월을 의미한다.
+const selectedDate = new Date(2026, 11, 31); 
+
+selectedDate.getFullYear();
+selectedDate.getMonth() + 1;
+selectedDate.getDate();
+selectedDate.getDay();
+selectedDate.getTime();</code></pre>
+
+            <div class="example-box">
+                <p class="example-title">실행 예제 - 예약일과 수령일 확인하기</p>
+                <p class="exmpale-desc">
+                    예약 날짜를 선택하면 예약일과 예약일로부터 7일 후의 수령일을 출력한다.
+                </p>
+
+                <div class="input-line">
+                    <input type="date" id="reservationDate">
+                    <button type="button" id="reservationButton">
+                        수령일 확인
+                    </button>
+                </div>
+                
+                <div id="reservationResult" class="output-box">
+                    결과가 이곳에 출력된다.
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="lesson-section">
+            <h2>3.8.4 Math 객체</h2>
+            <p>
+                <code>Math</code> 객체는 수학 계산에 필요한 속성과 메서드를 제공한다.
+                다른 객체와 달리 <code>new</code>로 생성하지 않고 <code>Math</code> 이름으로 바로 사용한다.
+            </p>
+
+            <pre><code>Math.random();
+Math.floor(숫자);
+Math.ceil(숫자);
+Math.round(숫자);
+Math.max(값1, 값2, 값3);
+Math.min(값1, 값2, 값3);</code></pre>
+
+            <div class="example-box">
+                <p class="example-title">실행 예제 - 오늘의 학습 주제 랜덤 추천</p>
+                <p class="exmpale-desc">
+                    배열에 저장된 학습 주제 중 하나를 <code>Math.random()</code>과 <code>Math.florr()</code>를 사용하여 랜덤으로 선택한다.
+                </p>
+
+                <button type="button" id="topicButton">
+                    학습 주제 추천
+                </button>
+                <div id="topicResult" class="output-box">
+                    결과가 이곳에 출력된다.
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2>3.8.5 Array 객체</h2>
+            <p>
+                <code>Array</code> 객체는 여러 개의 값을 순서대로 저장할 때 사용한다.
+                배열은 인덱스로 값에 접근하며, <code>push()</code>, <code>forEach()</code>, <code>join()</code>과 같은 메서드를 자주 사용한다.
+            </p>
+
+            <pre><code>const arrayName = [value1, value2, value3];
+
+arrayName.length;
+arrayName.push(newValue);
+
+arrayName.forEach(function(value) {
+    실행문;
+});
+
+arrayName.join("separator");</code></pre>
+
+            <div class="example-box">
+                <p class="example-title">실행 예제 - 참여자 명단 관리하기</p>
+                <p class="exmpale-desc">
+                    입력한 이름을 배열에 추가하고, 참여자 명단을 목록과 문자열 형태로 출력한다.
+                </p>
+
+                <div class="input-line">
+                    <input type="text" id="memberInput" placeholder="예: 홍길동">
+                    <button type="button" id="memberButton">참여자 추가</button>
+                </div>
+
+                <p id="memberCount" class="count-text">현재 참여자 0명</p>
+                <ul id="memberList" class="object-list output-box">
+                </ul>
+
+                <div id="memberText" class="output-box">
+                    참여자 명단이 이곳에 출력된다.
+                </div>               
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2>3.8.6 브라우저 객체와 문서 객체</h2>
+            <p>
+                브라우저는 <code>window</code>, <code>location</code>, <code>history</code>, <code>navigator</code>,
+                <code>screen</code>과 같은 객체를 제공한다.
+                HTML 문서에 접근할 때는 <code>document</code> 객체를 사용한다.
+            </p>
+
+            <pre><code>window.alert("메시지");
+location.href;
+history.back();
+navigator.userAgent;
+screen.width;
+document.getElementById("아이디");</code></pre>
+
+            <div class="note-box">
+                <p>
+                    브라우저 객체와 문서 객체는 화면 제어와 이벤트 처리에서 자주 사용된다.
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

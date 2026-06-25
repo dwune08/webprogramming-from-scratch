@@ -73,15 +73,53 @@ like.addEventListener('click', function(event) {
 const imageScreen = document.querySelector('#imageScreen');
 const imageSwapButton = document.querySelector('#imageSwapButton');
 const imageResult = document.querySelector('#imageResult');
+const animalKor = ['고양이', '강아지'];
+const animalEng = ['cat', 'dog'];
 
 imageSwapButton.addEventListener('click', function(event) {
+    const num = imageResult.textContent === '고양이'
+        ? 1
+        : 0;
+    imageScreen.src = `../image/${animalEng[num]}.png`;
+    imageResult.textContent = `${animalKor[num]}`;
+});
+
+
+// 실시간 글자수 세기
+const text = document.querySelector('#textInputBox');
+const result = document.querySelector('#textCountResult');
+
+text.addEventListener('input', function(event) {
+    result.textContent = `${(text.value).length}`;
+});
+
+
+// 카드 뒤집기
+const card = document.querySelector('#cardFlip');
+const cardResult = document.querySelector('#cardFlipResult');
+card.addEventListener('mouseover', function(event) {
+    card.textContent = '정답 : 오락가락';
+    cardResult.textContent = 'mouseover 이벤트가 실행되었습니다.';
+});
+card.addEventListener('mouseout', function(event) {
+    card.textContent = '게임 BGM을 4글자로 줄이면';
+    cardResult.textContent = '카드에 마우스를 올려 보세요.';
+});
+
+
+// 테마 선택하기
+const themeSelect = document.querySelector('#themeSelect');
+const themeResult = document.querySelector('#themeResult');
+
+themeSelect.addEventListener('change', function(event) {
+    const selectedText = event.target.options[event.target.selectedIndex].text;
+    const theme = themeSelect.value;
+
+    themeResult.classList.remove('dark', 'green', 'bright');
+    themeResult.classList.add(`${theme}`);
     
-    
-
-    imageResult.textContent = `현재 이미지는 ${animal}입니다.`;
-})
-
-
+    themeResult.textContent = `${selectedText}가 적용되었습니다.`;
+});
 
 const textInput = document.querySelector('#textInput');
 const inputResult = document.querySelector('#inputResult');

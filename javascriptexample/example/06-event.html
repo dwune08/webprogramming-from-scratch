@@ -135,9 +135,32 @@
 
             <div class="example-box">
                 <p class="example-title">실행 예제 - 이미지 번갈아 보기</p>
-                <div id="imageScreen"></div>
+                <img src="../image/cat.png" id="imageScreen"><br>
                 <button type="button" id="imageSwapButton">이미지 변경</button>
-                <div id="imageResult" class="output-box">현재 이미지는 고양이입니다.</div>
+                <div class="output-box">현재 이미지는 <span id="imageResult">고양이</span>입니다.</div>
+            </div>
+
+            <div class="example-box">
+                <p class="example-title">실행 예제 - 실시간 글자 수 세기(이벤트:input)</p>
+                <input type="text" id="textInputBox" placeholder="문장을 입력하세요">
+                <div class="output-box">현재 글자 수 : <span  id="textCountResult">0</span></div>
+            </div>
+
+            <div class="example-box">
+                <p class="example-title">실행 예제 - 카드 뒤집기(이벤트:mouseover, mouseout)</p>
+                <div id="cardFlip">게임 BGM을 4글자로 줄이면</div>
+                <div id="cardFlipResult" class="output-box">카드에 마우스를 올려 보세요.</div>
+            </div>
+
+            <div class="example-box">
+                <p class="example-title">실행 예제 - 테마 선택하기</p>
+                <select id="themeSelect">
+                    <option value="" disabled selected>테마 선택</option>
+                    <option value="bright">밝은 테마</option>
+                    <option value="dark">어두운 테마</option>
+                    <option value="green">초록 테마</option>
+                </select>
+                <div id="themeResult" class="defaultTheme">선택한 테마가 적용됩니다.</div>
             </div>
 
         </section>
