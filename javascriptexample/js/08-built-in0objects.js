@@ -109,6 +109,7 @@ function formatDate(date) {
 }
 
 
+<<<<<<< HEAD
 // Math 객체 - 오늘의 학습 주제 랜덤 추천
 const studyTopics = ['String 객체', 'Date 객체', 'Math 객체', 'Array 객체', 'DOM 요소 접근', '이벤트 처리'];
 
@@ -330,3 +331,7 @@ courseForm.addEventListener("submit",function() {
 
     applicationResult.innerHTML = html;
 });
+=======
+const topicButton = document.getElementById("topicButton");
+const topicResult = document.getElementById("topicResult");
+>>>>>>> a54e0449099027c29b2f79d4bdf0aa2e7fd9d431
