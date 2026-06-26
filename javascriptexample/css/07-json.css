@@ -136,3 +136,8 @@
 #postTable th:nth-child(3) { width: 53%; }  
 #postTable th:nth-child(4) { width: 10%; } 
 #postTable th:nth-child(5) { width: 14%; }  
+
+.input-label {
+    display: inline-block;
+    width: 80px;         
+}

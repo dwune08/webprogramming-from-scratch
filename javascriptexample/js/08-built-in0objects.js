@@ -32,6 +32,50 @@ emailButton.addEventListener('click', function() {
 });
 
 
+// 휴대폰 번호 가운데 자리 숨기기
+const phoneButton = document.getElementById("phoneButton");
+const phoneResult = document.getElementById("phoneResult");
+const phoneInput = document.getElementById("phoneInput");
+
+phoneButton.addEventListener("click", function() {
+    phoneNumber = phoneInput.value.trim();
+    
+
+    if (phoneNumber === "") {
+        alert("휴대폰 번호를 입력하세요.");
+        phoneInput.focus();
+        return;
+    }
+
+    if (phoneNumber.length !== 11) {
+        alert("휴대폰 번호는 11자리의 숫자여야 합니다.");
+        phoneInput.focus();
+        return;
+    }
+
+    let phone = "";
+    for (let i = 0; i < phoneNumber.length; i++) {
+        if(i <= 2 || i >= 7) {
+            phone += phoneNumber.charAt(i);
+        } else {
+            phone += "*";
+        }
+    }
+
+    const phone1 = phoneNumber.substring(0, 3);
+    const phone2 = phoneNumber.substring(7);
+
+    phoneResult.innerHTML = `
+        변환된 휴대폰 번호는<br>
+        charAt 사용 : [ ${phone} ]<br>
+        substring 사용 : [ ${phone1}-****-${phone2} ] 
+    `;
+
+    phoneInput.value = "";
+});
+
+
+// date 객체
 const reservationDate = document.getElementById("reservationDate");
 const reservationButton = document.getElementById("reservationButton");
 const reservationResult = document.getElementById("reservationResult");
@@ -63,3 +107,7 @@ function formatDate(date) {
 
     return `${year}년 ${month}월 ${day}일`;
 }
+
+
+const topicButton = document.getElementById("topicButton");
+const topicResult = document.getElementById("topicResult");
