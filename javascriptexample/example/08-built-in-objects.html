@@ -73,6 +73,18 @@ text.split("구분자");</code></pre>
                 </div>
             </div>
 
+            <div class="example-box">
+                <p class="example-title">실행 예제 - 휴대폰 번호 가운데 자리 숨기기</p>
+                <p class="exmpale-desc">
+                    휴대폰 번호를 입력하면 가운데 자리를 별표로 숨긴다.
+                </p>
+                <input type="text" id="phoneInput" placeholder="예: 01012345678">
+                <button type="button" id="phoneButton">
+                    변환하기
+                </button>
+                <div id="phoneResult" class="output-box">결과가 이곳에 출력된다.</div>
+            </div>
+
 
         </section>
 
@@ -116,6 +128,8 @@ selectedDate.getTime();</code></pre>
                 </div>
             </div>
 
+            
+
 
         </section>
 
@@ -143,9 +157,18 @@ Math.min(값1, 값2, 값3);</code></pre>
                     학습 주제 추천
                 </button>
                 <div id="topicResult" class="output-box">
-                    결과가 이곳에 출력된다.
+                    추천 결과가 이곳에 출력된다.
                 </div>
             </div>
+
+            <div class="example-box">
+                <p class="example-title">실행 예제 - 좌석 번호 랜덤 배정하기</p>
+                <p class="exmpale-desc">1번부터 30번까지의 좌석 번호 중 하나를 랜덤으로 선택한다.</p>
+                <button type="button" id="randomSeatButton">좌석 번호 뽑기</button>
+                <div id="randomSeatResult" class="output-box">좌석 번호가 이곳에 출력된다.</div>
+            </div>
+
+
         </section>
 
         <section class="lesson-section">
@@ -183,7 +206,18 @@ arrayName.join("separator");</code></pre>
 
                 <div id="memberText" class="output-box">
                     참여자 명단이 이곳에 출력된다.
-                </div>               
+                </div>        
+                
+                <div class="example-box">
+                <p class="example-title">실행 예제 - 상품 목록 관리하기</p>
+                <p class="exmpale-desc">
+                    입력한 상품명과 가격을 객체로 만든 뒤 배열에 추가하고, 상품 목록과 총 금액을 출력한다.
+                </p>
+                <input type="text" id="itemInput" placeholder="예: 키보드">
+                <input type="text" id="priceInput" placeholder="예: 30000">
+                <button type="button" id="itemButton">확인하기</button>
+                <div id="result" class="output-box">결과가 이곳에 출력된다.</div>
+            </div>
             </div>
         </section>
 
@@ -204,8 +238,138 @@ document.getElementById("아이디");</code></pre>
 
             <div class="note-box">
                 <p>
-                    브라우저 객체와 문서 객체는 화면 제어와 이벤트 처리에서 자주 사용된다.
+                    <code>setTimeout</code>은 지정한 시간이 지난 뒤 함수를 한 번만 실행한다.<br>
+                    <code>setInterval</code>은 지정한 시간마다 함수를 반복 실행한다.
+                    반복 실행 중인 작업은 <code>clearInterval()</code>을 사용하여 중지할 수 있다.
+                    시간은 밀리초 단위로 작성하며, <code>1000</code>은 1초, <code>3000</code>은 3초를 의미한다.
                 </p>
+            </div>
+
+            <div class="example-box">
+                <p class="example-title">실행 예제 - 일정 시간 후 알림창 출력하기</p>
+                <p class="exmpale-desc">
+                    버튼을 클릭하면 3초 후에 알림창이 화면에 표시된다.
+                </p>
+
+                <button type="button" id="alertButton">
+                    버튼 클릭
+                </button>
+            </div>
+
+            <div class="example-box">
+                <p class="example-title">실행 예제 - 실시간 시계 동작하기</p>
+                <p class="exmpale-desc">
+                    시계동작 버튼을 클릭하면 1초바다 현재 시간이 출력되고,
+                    시계중지 버튼을 클릭하면 시간이 멈춘다.
+                </p>
+
+                <button type="button" id="startClock">시계동작</button>
+                <button type="button" id="stopClock">시계중지</button>
+
+                <div id="clockResult" class="output-box">
+                    시계가 이곳에 출력된다.
+                </div>
+            </div>
+
+            <div class="example-box">
+                <p class="example-title">실행 예제 - 페이지 이동하기</p>
+                <p class="exmpale-desc">
+                    버튼을 클릭하면 <code>location.href</code>를 사용하여 다른 페이지로 이동한다.
+                </p>
+                <button type="button" id="noticeButton">
+                    페이지 이동
+                </button>
+            </div>
+
+            <div class="example-box">
+                <p class="example-title">실행 예제 - 썸네일 이미지 선택하기</p>
+                <p class="exmpale-desc">
+                    작은 이미지를 클릭하면 선택한 이미지가 큰 이미지 영역에 표시된다.
+                </p>
+                    <div id="thumbnailSpace">
+                        <img src="../image/image1.png" class="thumbnail">
+                        <img src="../image/image1.png" id="picture">
+                        <img src="../image/image2.png" class="thumbnail">
+                        <img src="../image/image3.png" class="thumbnail">
+                    </div>
+            </div>
+
+            <div class="example-box">
+                <p class="example-title">실행 예제 - 1초 간격으로 새로운 이미지 보여주기</p>
+                <img src = "../image/bear-doll.png" id="changeImage">
+            </div>
+
+            <div class="example-box">
+                <p class="example-title">실행 예제 - 인증번호 생성하기</p>
+                <p class="example-desc" >고객님의 인증번호는 <span id="noticeNumber">00000</span>입니다.</p>
+                <button type="button" id="certifrcationNumber">인증번호</button>
+                <button type="button" id="f5">페이지 새로고침</button>
+            </div>
+
+
+
+            <div class="example-box">
+                <p class="example-title">실행 예제 - 강의 신청 양식</p>
+                <p class="example-desc">
+                    수강생 정보를 입력하고 강의를 선택하면 신청 내용을 확인할 수 있다.
+                </p>
+                <form id="courseForm" class="form-box">
+                <p class="example-titl">
+                    <label class="input-label">이름</label>
+                    <input type="text" id="studentName" placeholder="예: 홍길동">
+                </p>
+                <p class="example-titl">
+                    <label class="input-label">강의명</label>
+                    <select id="courseName">
+                        <option value="select" selected disabled>강의 선택</option>
+                        <option value="Java">Java</option>
+                        <option value="SQL">SQL</option>
+                        <option value="HTML">HTML</option>
+                    </select>
+                </p>
+                
+                <p class="example-titl">
+                    <label class="input-label">수강 형태</label>
+                    <input type="radio" name="onoff" value="온라인" checked>온라인
+                    <input type="radio" name="onoff" value="오프라인">오프라인
+                </p>               
+
+                <button type="submit" id="applicationButton">신청하기</button>
+                </form>
+                <div id="applicationResult" class="output-box">
+                    결과가 이곳에 출력된다.
+                </div>
+            </div>
+
+            <div class="example-box">
+                <p class="example-title">실행 예제 - 상담 예약 양식</p>
+                <p class="example-desc">
+                    상담 날짜와 상담 분야를 선택하면 예약 내용을 확인할 수 있다.
+                </p>
+                <form id="counselForm">
+                    <p>
+                        <label>이름</label>
+                        <input type="text" id="CounseleeName" placeholder="예: 홍길동">
+                    </p>
+                    <p>
+                        <label>상담 날짜</label>
+                        <input type="date" id="CounselDate">
+                    </p>
+                    <p>
+                        <label>상담 분야</label>
+                        <select id="CounselPart">
+                            <option value="none" selected disabled>상담 분야 선택</option>
+                            <option value="none">진로 상담</option>
+                            <option value="none">정신과 상담</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label>상담 내용</label>
+                        <input type="text" id="CounselDetail" placeholder="상담 내용을 입력하세요.">
+                    </p>
+                    <button type="submit" id="counselReserveButton">예약하기</button>
+                </form>
+                <div id="result" class="output-box">예약 정보가 이곳에 출력된다.</div>
             </div>
         </section>
     </main>

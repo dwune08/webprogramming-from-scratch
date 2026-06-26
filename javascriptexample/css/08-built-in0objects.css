@@ -40,3 +40,61 @@
         width: 100%;
     }
 }
+
+#thumbnailSpace {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 450px;
+    width:100%;
+}
+#thumbnailSpace #picture {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+}
+#thumbnailSpace img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#changeImage {
+    width: 300px;
+    border: 3px solid black;
+    border-radius: 8px;
+}
+
+.data-table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+.data-table th, .data-table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+.data-table th {
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.example-titl {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.input-label {
+    display: inline-block;
+    width: 90px; 
+    font-weight: bold;   
+    color: #333;
+}
+
+#studentName, #courseName {
+    width: 250px;           
+}

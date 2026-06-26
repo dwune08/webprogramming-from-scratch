@@ -198,6 +198,178 @@ objectLiteralButton.addEventListener("click", function() {
     objectLiteralMemberResult.innerHTML = tag;
 });
 
+
+// ES6 클래스 기본 문법
+class User {
+    constructor(name, hobby) {
+        this.name = name;
+        this.hobby = hobby;
+    }
+
+    greeting() {
+        return `안녕하세요. 제 이름은 ${this.name}입니다.`;
+    }
+
+    getHobbyText() {
+        return this.hobby.join(", ");
+    }
+}
+
+const classUserButton = document.getElementById("classUserButton");
+const classUserResult = document.getElementById("classUserResult");
+
+classUserButton.addEventListener("click", function() {
+    const user = new User("홍길동", ["여행", "영화"]);
+
+    classUserResult.innerHTML = `
+        <p>${user.greeting()}</p>
+        <p><strong>취미:</strong> ${user.getHobbyText()}</p>
+    `;
+});
+
+
+// ES6 클래스 예제 - 강의 신청 객체 생성하기
+class CourseApplication {
+    constructor(studentName, courseName, status) {
+        this.studentName = studentName;
+        this.courseName = courseName;
+        this.status = status;
+    }
+
+    getApplicationInfo() {
+        return `${this.studentName}님은 ${this.courseName} 강의를 신청했습니다.`;
+    }
+
+    getStatusMessage() {
+        return `현재 신청 상태는 ${this.status}입니다.`;
+    }
+}
+
+const classCourseButton = document.getElementById("classCourseButton");
+const classCourseResult = document.getElementById("classCourseResult");
+
+classCourseButton.addEventListener("click", function() {
+    const application = new CourseApplication("홍길동", "JavaScript 기초", "신청 완료");
+
+    classCourseResult.innerHTML = `
+        <p><strong>수강생:</strong> ${application.studentName}</p>
+        <p><strong>강의명:</strong> ${application.courseName}</p>
+        <p><strong>상태:</strong> ${application.status}</p>
+        <p>${application.getApplicationInfo()}</p>
+        <p>${application.getStatusMessage()}</p>
+    `;
+});
+
+
+// 클래스의 getter와 setter
+class Coffee {
+    constructor(name) {
+        this._name = name;
+    }
+
+    get name() {
+        console.log("call getter");
+        return this._name;
+    }
+
+    set name(name) {
+        console.log("call setter");
+        this._name = name;
+    }
+
+    display() {
+        return `현재 선택한 커피는 ${this._name}입니다.`;
+    }
+}
+
+const coffee = new Coffee("Americano");
+
+const coffeeNameInput = document.getElementById("coffeeNameInput");
+const coffeeButton = document.getElementById("coffeeButton");
+const coffeeResult = document.getElementById("coffeeResult");
+
+coffeeButton.addEventListener("click", function() {
+    const coffeeName = coffeeNameInput.value.trim();
+
+    if (coffeeName === "") {
+        alert("커피 이름을 입력하세요.");
+        coffeeNameInput.focus();
+        return;
+    }
+
+    coffee.name = coffeeName;
+
+    coffeeResult.innerHTML = `
+        <p><strong>커피이름:</strong> ${coffee.name}</p>
+        <p>${coffee.display()}</p>
+    `;
+
+    coffeeNameInput.value = "";
+    coffeeNameInput.focus();
+});
+
+
+// 연락처 정보 변경하기
+class PhoneBook {
+    constructor(name, phone) {
+        this._name = name;
+        this._phone = phone;
+    }
+
+    get name() {
+        return this._name;
+    }
+
+    set name(name) {
+        this._name = name;
+    }
+
+    get phone() {
+        return this._phone;
+    }
+
+    set phone(phone) {
+        this._phone = phone;
+    }
+
+    display() {
+        return `${this._name} 님의 전화번호는 ${this._phone} 입니다.`;
+    }
+}
+
+
+
+const changeButton = document.getElementById("changeButton");
+const nameInput = document.getElementById("nameInput");
+const phoneInput = document.getElementById("phoneInput");
+const changeResult = document.getElementById("changeResult");
+
+changeButton.addEventListener("click", function() {
+
+    const name = nameInput.value.trim();
+    const phone = phoneInput.value.trim();
+
+    if (name === "") {
+        changeResult.textContent = '이름을 입력하세요.';
+        nameInput.focus();
+        return;
+    }
+    if (phone === "") {
+        changeResult.textContent = '전화번호를 입력하세요.';
+        phoneInput.focus();
+        return;
+    }
+
+    const phonebook = new PhoneBook(name, phone);
+
+    changeResult.innerHTML = phonebook.display();
+
+    nameInput.value = "";
+    phoneInput.value = "";
+    nameInput.focus();
+});
+
+
 // JSON 문자열 변환
 const convertUser = {
     name: "javauser",

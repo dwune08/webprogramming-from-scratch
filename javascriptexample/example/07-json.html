@@ -309,12 +309,127 @@ const jsonData = '{"name":"홍길동", "age":30}';</code></pre>
                     결과가 이곳에 출력된다.
                 </div>
             </div>
-
- 
         </section>
 
         <section class="lesson-section">
-            <h2>3.7.8 JSON 문자열 변환</h2>
+            <h2>3.7.8 ES6 클래스 기본 문법</h2>
+            <p>
+                클래스는 객체를 만들기 위한 설계도와 같은 문법이다.
+                <code>constructor</code>는 객체가 생성될 때 실행되는 생성자이며,
+                클래스 안에 작성한 함수는 객체의 메서드로 사용할 수 있다.
+            </p>
+
+            <pre><code>class ClassName {
+    constructor(value)                 {
+        this.property = value;
+    }
+
+    methodName() {
+        실행문;
+    }
+}
+
+const objectName = new ClassNmae(value);
+objectName.methodName();</code></pre>
+
+            <div class="example-box">
+                <p class="example-title">실행 예제 - 회원 객체 생성하기</p>
+                <p class="example-desc">
+                    클래스를 사용하여 회원 객체를 생성하고, 객체의 메서드를 실행한다.
+                </p>
+
+                <button type="button" id="classUserButton">
+                    회원 정보 출력
+                </button>
+
+                <div id="classUserResult" class="output-box">
+                    결과가 이곳에 출력된다.
+                </div>
+            </div>
+
+            <div class="example-box">
+                <p class="example-title">실행 예제 - 강의신청 객체 생성하기</p>
+                <p class="example-desc">
+                    클래스를 사용하여 강의 신청 객체를 생성하고, 객체의 메서드를 실행한다.
+                </p>
+                <button type="button" id="classCourseButton">
+                    신청 정보 출력
+                </button>
+
+                <div id="classCourseResult" class="output-box">
+                    결과가 이곳에 출력된다.
+                </div>
+            </div>
+
+        </section>
+
+        <section class="lesson-section">
+            <h2>3.7.9 클래스의 getter와 setter</h2>
+            <p>
+                <code>getter</code>는 객체의 값을 가져몰 때 사용하는 메서드이고,
+                <code>setter</code>는 객체의 값을 변경할 때 사용하는 메서드이다.
+                메서드처럼 작성하지만 사용할 때는 속성처럼 접근한다.
+            </p>
+
+            <pre><code>class Coffee {
+    constructor (name) {
+        this._name = name;
+    }
+    get name() {
+        return this._name;
+    }
+    set name(name) {
+        this._name = name;
+    }
+}
+
+const coffee = new Coffee("Americano");
+coffee.name;
+coffee.name = "Espresso" ;</code></pre>
+
+            <div class="example-box">
+                <p class="example-title">실행 예제 - 커피 이름 변경하기</p>
+                <p class="example-desc">
+                    입력한 커피 이름을 setter로 변경하고, getter로 가져와 화면에 출력한다.
+                </p>
+                <div class="input-line">
+                    <input type="text" id="coffeeNameInput" placeholder="예: Espresso">
+                    <button type="button" id="coffeeButton">
+                        커피 이름 변경
+                    </button>
+                </div>
+
+                <div id="coffeeResult" class="output-box">
+                    결과가 이곳에 출력된다.
+                </div>
+            </div>
+        </section>
+
+         <div class="example-box">
+                <p class="example-title">실행 예제 - 연락처 정보 변경하기</p>
+                <p class="example-desc">
+                    입력한 이름과 전화번호를 setter로 변경하고, getter로 가져와 화면에 출력한다.
+                </p>
+                <div class="input-line">
+                    <p class="example-title">
+                        <label class="input-label">이름</label> 
+                        <input type="text" id="nameInput" placeholder="예: 홍길동">
+                    </p>
+                    <p class="example-title">
+                        <label class="input-label">전화번호</label>
+                        <input type="text" id="phoneInput" placeholder="예: 010-1234-5678">
+                    </p>
+                </div>
+                <button type="button" id="changeButton">
+                        확인
+                    </button>
+                <div id="changeResult" class="output-box">
+                    결과가 이곳에 출력된다.
+                </div>
+            </div>
+
+        <section class="lesson-section">
+            <h2>3.7.10 JSON 문자열 변환</h2>
             <p>
                 <code>JSON.parse()</code>는 JSON 문자열을 JavaScript 객체로 변환하고,
                 <code>JSON.stringify()</code>는 JavaScript 객체를 JSON 문자열로 변환한다.
