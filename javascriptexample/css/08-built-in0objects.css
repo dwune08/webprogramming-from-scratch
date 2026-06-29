@@ -71,7 +71,6 @@
     border-collapse: collapse;
     background-color: #fff;
 }
-
 .data-table th, .data-table td {
     padding: 8px;
     border: 1px solid #ccc;
@@ -94,7 +93,49 @@
     font-weight: bold;   
     color: #333;
 }
-
 #studentName, #courseName {
     width: 250px;           
+}
+
+#counseleeName, #counselDate, #counselPart {
+    width: 250px;
+}
+#counselDetail {
+    width: 400px;
+    height: 100px;
+    padding-bottom: 70px;
+}
+
+
+.order-table {
+    margin-bottom: 14px;
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+.order-table td {
+    padding: 8px;
+    border: 2px solid #e3e3e3;
+    text-align: left;
+    border-left: none;
+    border-right: none;
+}
+.order-table tr td:nth-child(1) {
+    width: 30%;
+}
+.order-table tr td:nth-child(2) {
+    width: 20%;
+}
+.order-table tr td:nth-child(3) {
+    width: 20%;
+}
+.order-table tr td:nth-child(4) {
+    width: 30%;
+}
+.order-table thead {
+    font-weight: bold;
+    background-color: #eee;
+}
+.order-table input {
+    width: 80px;
 }

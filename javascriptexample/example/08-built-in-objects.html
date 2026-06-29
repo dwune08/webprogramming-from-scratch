@@ -207,15 +207,15 @@ arrayName.join("separator");</code></pre>
                 </div>        
                 
                 <div class="example-box">
-                <p class="example-title">실행 예제 - 상품 목록 관리하기</p>
-                <p class="exmpale-desc">
-                    입력한 상품명과 가격을 객체로 만든 뒤 배열에 추가하고, 상품 목록과 총 금액을 출력한다.
-                </p>
-                <input type="text" id="itemInput" placeholder="예: 키보드">
-                <input type="text" id="priceInput" placeholder="예: 30000">
-                <button type="button" id="itemButton">확인하기</button>
-                <div id="result" class="output-box">결과가 이곳에 출력된다.</div>
-            </div>
+                    <p class="example-title">실행 예제 - 상품 목록 관리하기</p>
+                    <p class="exmpale-desc">
+                        입력한 상품명과 가격을 객체로 만든 뒤 배열에 추가하고, 상품 목록과 총 금액을 출력한다.
+                    </p>
+                    <input type="text" id="itemInput" placeholder="예: 키보드">
+                    <input type="text" id="priceInput" placeholder="예: 30000">
+                    <button type="button" id="itemButton">상품 추가</button>
+                    <div id="itemResult" class="output-box">결과가 이곳에 출력된다.</div>
+                </div>
             </div>
         </section>
 
@@ -346,28 +346,93 @@ document.getElementById("아이디");</code></pre>
                 </p>
                 <form id="counselForm">
                     <p>
-                        <label>이름</label>
-                        <input type="text" id="CounseleeName" placeholder="예: 홍길동">
+                        <label class="input-label">이름</label>
+                        <input type="text" id="counseleeName" placeholder="예: 홍길동">
                     </p>
                     <p>
-                        <label>상담 날짜</label>
-                        <input type="date" id="CounselDate">
+                        <label class="input-label">상담 날짜</label>
+                        <input type="date" id="counselDate">
                     </p>
                     <p>
-                        <label>상담 분야</label>
-                        <select id="CounselPart">
+                        <label class="input-label">상담 분야</label>
+                        <select id="counselPart">
                             <option value="none" selected disabled>상담 분야 선택</option>
                             <option value="none">진로 상담</option>
                             <option value="none">정신과 상담</option>
                         </select>
                     </p>
                     <p>
-                        <label>상담 내용</label>
-                        <input type="text" id="CounselDetail" placeholder="상담 내용을 입력하세요.">
+                        <label class="input-label">상담 내용</label>
+                        <input type="text" id="counselDetail" placeholder="상담 내용을 입력하세요.">
                     </p>
                     <button type="submit" id="counselReserveButton">예약하기</button>
                 </form>
-                <div id="result" class="output-box">예약 정보가 이곳에 출력된다.</div>
+                <div id="counselReserveResult" class="output-box">예약 정보가 이곳에 출력된다.</div>
+            </div>
+        </section>
+        <section class="lesson-section">
+            <h2>예제. 카페 음료 주문서</h2>
+            <p>음료 수량을 입력하면 음료별 합계와 전체 주문 수량, 총 결제 금액이 자동으로 계산된다.</p>
+
+            <div class="example-box">
+                <p class="example-title">실행 예제 - 카페 음료 주문서 작성하기</p>
+                <table class="order-table">
+                    <thead>
+                        <tr>
+                            <td>음료명</td>
+                            <td>가격</td>
+                            <td>수량</td>
+                            <td>합계</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>아메리카노</td>
+                            <td>3,000원</td>
+                            <td>
+                                <input type="text" id="quantityOfAmericano" class="inputQuantity" placeholder="0">
+                            </td>
+                            <td>
+                                <input type="text" id="totalPriceOfAmericano" placeholder="0" readonly> 원
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>카페라떼</td>
+                            <td>4,000원</td>
+                            <td>
+                                <input type="text" id="quantityOfCaffelatte" class="inputQuantity" placeholder="0">
+                            </td>
+                            <td>
+                                <input type="text" id="totalPriceOfCaffelatte" placeholder="0" readonly> 원
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>딸기스무디</td>
+                            <td>5,500원</td>
+                            <td>
+                                <input type="text" id="quantityOfStrawberry" class="inputQuantity" placeholder="0">
+                            </td>
+                            <td>
+                                <input type="text" id="totalPriceOfStrawberry" placeholder="0" readonly> 원
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>총합계</strong></td>
+                            <td></td>
+                            <td>
+                                <input type="text" id="totalQuantity" placeholder="0" readonly>
+                            </td>
+                            <td>
+                                <input type="text" id="totalPrice" placeholder="0" readonly> 원
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" id="orderButton">주문서 출력</button>
+                <button type="button" id="resetButton">초기화</button>
+                <div id="orderResult" class="output-box">
+                    주문서가 이곳에 출력된다.
+                </div>
             </div>
         </section>
     </main>

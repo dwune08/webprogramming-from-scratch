@@ -108,8 +108,6 @@ function formatDate(date) {
     return `${year}년 ${month}월 ${day}일`;
 }
 
-
-<<<<<<< HEAD
 // Math 객체 - 오늘의 학습 주제 랜덤 추천
 const studyTopics = ['String 객체', 'Date 객체', 'Math 객체', 'Array 객체', 'DOM 요소 접근', '이벤트 처리'];
 
@@ -179,6 +177,67 @@ memberButton.addEventListener("click", function() {
 
 
 // 상품 목록 관리하기
+const itemInfoList = [];
+
+const itemButton = document.getElementById("itemButton");
+const itemResult = document.getElementById("itemResult");
+const itemInput = document.getElementById("itemInput");
+const priceInput = document.getElementById("priceInput");
+
+function renderItemInfoList() {
+    itemResult.innerHTML = '';
+
+    let html = `
+        <table class="data-table">
+            <tr>
+                <th>상품명</th>
+                <th>가격</th>
+            </tr>
+    `;
+
+    itemInfoList.forEach(function(itemInfo) {
+        html += `
+            <tr>
+                <td>${itemInfo.item}</td>
+                <td>${itemInfo.price}</td>
+            </tr>
+        `;
+    });
+
+    html += `
+        </table> 
+    `;
+
+    itemResult.innerHTML = html;
+}
+
+itemButton.addEventListener("click", function() {
+    const item = itemInput.value.trim();
+    const price = priceInput.value.trim();
+
+    if (item === "") {
+        alert("상품명을 입력하세요.");
+        itemInput.focus();
+        return;
+    }
+    if (price === "") {
+        alert("상품 가격을 입력하세요.");
+        priceInput.focus();
+        return;
+    }
+
+    const itemInfo = {
+        item: item,
+        price: price
+    }
+
+    itemInfoList.push(itemInfo);
+
+    itemInput.value = "";
+    priceInput.value = "";
+
+    renderItemInfoList();
+});
 
 
 
@@ -331,7 +390,140 @@ courseForm.addEventListener("submit",function() {
 
     applicationResult.innerHTML = html;
 });
-=======
-const topicButton = document.getElementById("topicButton");
-const topicResult = document.getElementById("topicResult");
->>>>>>> a54e0449099027c29b2f79d4bdf0aa2e7fd9d431
+
+const reservationSheets = [];
+const counselForm = document.getElementById("counselForm");
+const counselReserveResult = document.getElementById("counselReserveResult");
+const counseleeName = document.getElementById("counseleeName");
+const counselDate = document.getElementById("counselDate");
+const counselPart = document.getElementById("counselPart");
+const counselDetail = document.getElementById("counselDetail");
+
+
+counselForm.addEventListener("submit",function() {
+    event.preventDefault();
+
+    name = counseleeName.value.trim();
+    date = counselDate.value;
+    part = counselPart.value.trim();
+    detail = counselDetail.value.trim();
+    
+    const reservationSheet = {
+        name: name,
+        date: date,
+        part: part,
+        detail: detail
+    };
+
+    if(name === "" || date === "" || part === "") {
+        counselReserveResult.textContent = '이름, 상담 날짜, 상담 분야를 모두 입력해주세요.';
+        return;
+    }
+
+    reservationSheets.push(reservationSheet);
+
+    counselReserveResult.textContent = '';
+
+    reservationSheets.forEach(function(reservationSheet) {
+        counselReserveResult.innerHTML += `
+            ${reservationSheet.name} 님은 ${reservationSheet.date}에 ${reservationSheet.part} 예약이 있습니다.<br>
+            상담 내용: ${reservationSheet.detail}<br>
+        `;
+    });
+    counseleeName.value = '';
+    counselDate.value = '';
+    counselPart.value = '';
+    counselDetail.value = '';
+});
+
+const orderButton = document.getElementById("orderButton");
+const resetButton = document.getElementById("resetButton");
+const orderResult = document.getElementById("orderResult");
+
+// 각 메뉴의 데이터를 배열로 관리
+const drinks = [
+    {
+        name: "아메리카노",
+        price: 3000,
+        quantity: document.getElementById("quantityOfAmericano"),
+        total: document.getElementById("totalPriceOfAmericano")
+    },
+    {
+        name: "카페라떼",
+        price: 4000,
+        quantity: document.getElementById("quantityOfCaffelatte"),
+        total: document.getElementById("totalPriceOfCaffelatte")
+    },
+    {
+        name: "딸기스무디",
+        price: 5500,
+        quantity: document.getElementById("quantityOfStrawberry"),
+        total: document.getElementById("totalPriceOfStrawberry")
+    },
+];
+
+const totalQuantity = document.getElementById("totalQuantity");
+const totalPrice = document.getElementById("totalPrice");
+
+// 1. 개별 품목 합계 및 전체 총합계를 한 번에 계산하는 통합 함수 정의
+function calculateAll() {
+    let currentTotalQty = 0;
+    let currentTotalPrice = 0;
+
+    drinks.forEach(function(drink) {
+        const count = Number(drink.quantity.value.trim()) || 0;
+        const itemTotal = drink.price * count;
+
+        // 각 품목 합계 input에 반영
+        drink.total.value = itemTotal;
+
+        // 전체 총합계 누적
+        currentTotalQty += count;
+        currentTotalPrice += itemTotal;
+    });
+
+    // 화면의 총합계 영역에 최종 반영
+    totalQuantity.value = currentTotalQty;
+    totalPrice.value = currentTotalPrice;
+}
+
+// 2. 클래스가 .inputQuantity인 모든 입력창에 이벤트 리스너 등록
+// 괄호 없이 함수 이름(calculateAll)만 전달하여 입력할 때마다 실행되도록 합니다.
+const inputQuantities = document.querySelectorAll(".inputQuantity");
+inputQuantities.forEach(function(inputElement) {
+    inputElement.addEventListener("input", calculateAll);
+});
+
+// 3. 초기화 버튼
+resetButton.addEventListener("click", function() {
+    drinks.forEach(function(drink) {
+        drink.quantity.value = ""; // 빈 칸으로 세팅하거나 0으로 세팅
+    });
+    calculateAll(); // 다 비운 상태에서 계산 함수를 한 번 호출해 0으로 갱신
+    orderResult.textContent = '주문서가 이곳에 출력된다.';
+});
+
+// 4. 주문서 출력 버튼
+orderButton.addEventListener("click", function() {
+    // 주문서 양식 출력 (배열을 활용해 동적으로 문자열을 생성할 수도 있지만 기존 포맷 유지)
+    orderResult.innerHTML = `
+        -------------------<br>
+        아메리카노 : ${drinks[0].quantity.value || 0} 잔<br>
+        카페라떼 : ${drinks[1].quantity.value || 0} 잔<br>
+        딸기스무디 : ${drinks[2].quantity.value || 0} 잔<br>
+        -------------------<br>
+        총 주문 수량 : ${totalQuantity.value} 잔<br>
+        총 결제 금액 : ${totalPrice.value} 원<br>
+        -------------------
+    `;
+    
+    // 출력 후 입력값 초기화
+    drinks.forEach(function(drink) {
+        drink.quantity.value = "";
+    });
+    calculateAll();
+});
+
+
+
+
