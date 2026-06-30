@@ -251,7 +251,6 @@ const resetButton = document.getElementById("resetButton");
 const checkInput = document.querySelectorAll("#joinInput input");
 const joinResult = document.getElementById("joinResult");
 
-
 const joinName = document.getElementById("joinName");
 const joinId = document.getElementById("joinId");
 const joinPassword = document.getElementById("joinPassword");
@@ -335,11 +334,11 @@ joinCheckButton.addEventListener("click", function() {
         joinResult.innerHTML = `
             가입이 완료되었습니다.<br>
             가입 정보<br>
-            이름: ${joinFields[0].id}<br>
-            아이디: ${joinFields[1].id}<br>
-            비밀번호: ${joinFields[2].id}<br>
-            이메일: ${joinFields[3].id}<br>
-            휴대폰 번호: ${joinFields[4].id}
+            이름: ${joinName.value}<br>
+            아이디: ${joinId.value}<br>
+            비밀번호: ${joinPassword.value}<br>
+            이메일: ${joinEmail.value}<br>
+            휴대폰 번호: ${joinPhone.value}
         `;
 
         joinName.value = '';
